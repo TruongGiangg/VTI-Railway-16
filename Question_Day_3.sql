@@ -18,7 +18,8 @@ WHERE	departmentName = 'Marketing';
 -- Question 4: lấy ra thông tin account có full name dài nhất
 SELECT 	*
 FROM `account` 
-WHERE LENGTH(FullName) = (SELECT MAX(LENGTH(FullName)) from `account`);
+WHERE LENGTH(FullName) = (SELECT MAX(LENGTH(FullName)) from `account`)
+ORDER BY Fullname DESC;
 
 
 -- Question 5: Lấy ra thông tin account có full name dài nhất và thuộc phòng ban có id = 3

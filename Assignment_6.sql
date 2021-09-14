@@ -59,6 +59,7 @@ DELIMITER ;
 
 CALL Get_question()
 
+
 -- Question 4: Tạo store để trả ra id của type question có nhiều câu hỏi nhất
 DROP PROCEDURE IF EXISTS sp_GetCountQuesFromType;
 DELIMITER $$
@@ -76,6 +77,7 @@ END$$
 DELIMITER ;
 Call sp_GetCountQuesFromType();
 
+
 -- Question 5: Sử dụng store ở question 4 để tìm ra tên của type question
 DROP PROCEDURE IF EXISTS sp_GetCountQuesFromType;
 DELIMITER $$
@@ -92,6 +94,7 @@ HAVING count(q.TypeID) = (SELECT MAX(SL) FROM CTE_MaxTypeID);
 END$$
 DELIMITER ;
 Call sp_GetCountQuesFromType();
+
 
 -- Question 9: Viết 1 store cho phép người dùng xóa exam dựa vào ID
 DROP PROCEDURE IF EXISTS sp_DeleteExamWithID;
